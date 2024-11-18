@@ -17,7 +17,7 @@ There are 554 unique users in the dataset.
 
 ***
 
-### To answer Q2 to Q8, we will create a temporary table.
+### To answer Q2 to Q8, I will create a temporary table.
 
 ````sql
 DROP TABLE IF EXISTS user_measure_count;
@@ -33,11 +33,11 @@ GROUP BY id);
 
 <img width="801" alt="image" src="https://user-images.githubusercontent.com/81607668/128625477-926f9d69-f307-4e6a-bdd6-40d026338fed.png">
 
-Alright, once we have created the temp table, let's move on to our questions.
+Alright, once I have created the temp table, let's move on to my questions.
 
 ***
 
-### 2. How many total measurements do we have per user on average?
+### 2. How many total measurements do I have per user on average?
 
 Question is asking for the **average number of measurements for all users**.
 
@@ -142,8 +142,8 @@ Out of 554 active users, 204 users have at least 2 types of measurements making 
 ***
 ### 8. What is the number and percentage of the active user base who have all 3 measures - blood glucose, weight and blood pressure?
 
-- First thing we will do is to create a `CTE` with results filtered to users with all measures.
-- Then, we perform a `LEFT JOIN` on the user_measure_count and all_measures `CTE` meaning, we will retrieve all records in user_measure_count and matching records from all_measures `CTE`. 
+- First thing I will do is to create a `CTE` with results filtered to users with all measures.
+- Then, I perform a `LEFT JOIN` on the user_measure_count and all_measures `CTE` meaning, I will retrieve all records in user_measure_count and matching records from all_measures `CTE`. 
 
 ````sql
 WITH all_measures AS (
@@ -166,8 +166,8 @@ Out of 554 active users, 50 users have taken all 3 measures making up 9% of tota
 ***
 ### 9. For users that have blood pressure measurements, what is the median systolic/diastolic blood pressure values?
 
-- First, we filter results to users with blood pressure measurements.
-- Then, we find the median of systolic and diastolic measurements.
+- First, I filter results to users with blood pressure measurements.
+- Then, I find the median of systolic and diastolic measurements.
 
 ````sql
 SELECT
